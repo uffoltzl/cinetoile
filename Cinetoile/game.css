@@ -1,0 +1,286 @@
+/* Animation */
+
+#swup {
+    opacity: 0;
+    transition: 3s;
+}
+
+@keyframes vibrate {
+    10%, 90% {transform: translate3d(-1px, 0, 0);}
+    20%, 80% {transform: translate3d(2px, 0, 0);}
+    30, 50%, 70% {transform: translate3d(-4px, 0, 0);}
+    40%, 60% {transform: translate3d(4px, 0, 0);}
+}
+
+/* Division de l'espace */
+
+
+#board {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    width: 98.5%;
+    overflow-y: auto;
+    border-radius: 10px;
+    border: 3px solid #CECECE;
+    transition: 2s;
+    padding-bottom: 20px;
+}
+
+#hand {
+    position: absolute;
+    display: flex;
+    height: 25%;
+    width: 75%;
+    top: 75%;
+    transition: 2s;
+}
+
+#error {
+    color: #222021;
+    -webkit-text-stroke: 2px #CECECE;
+    text-align: center;
+    margin: 10px;
+    margin-left: 15%;
+}
+
+#clues, #score {
+    color: #222021;
+    -webkit-text-stroke: 2px #CECECE;
+    text-align: center;
+    margin: 10px;
+}
+
+#button_clue {
+    width: 20%;
+    transition: 2s;
+}
+
+#board img, #hand img {
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+    opacity: 1;
+}
+
+button {
+    position: relative;
+    text-align: center;
+    border: 3px solid #CECECE;
+    color: #CECECE;
+    background-color: #222021;
+    border-radius: 12px;
+    width: 30%;
+    padding: 5px 10px;
+    margin-top: 10%;
+}
+
+button:hover {
+  transform: translateY(-0.3em);
+}
+
+/* Indication */
+
+#indication {
+    margin-top: 10px;
+    overflow: hidden;
+    opacity: 0;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    letter-spacing: .15em;
+    font-size: small;
+}
+
+@keyframes typing {
+    from {width: 0;}
+    to {width: 100%;}
+}
+
+@keyframes cursor {
+    from, to {border-color: transparent;}
+    50% {border-color: orange;}
+}
+
+#tuto {
+    position: absolute;
+    font-size: 50px;
+    font-weight: bold;
+    font-style: italic;
+    top: 5%;
+    left: 42%;
+    z-index: 11;
+    opacity: 0;
+}
+
+@keyframes tutorial {
+    0%, 20%, 40%, 60%, 80%, 100% {opacity: 1;}
+    10%, 30%, 50%, 70%, 90% {opacity: 0;}
+}
+
+#fleche {
+    position: absolute;
+    width: 10%;
+    opacity: 0;
+}
+
+@keyframes fleche_anim {
+    0% {
+        opacity: 1;
+        transform: rotate(180deg);
+        top: 60%;
+        left: 0;
+        z-index: 10;
+    }
+    50%, 56%, 60% {
+        opacity: 1;
+        transform: rotate(180deg);
+        top: 60%;
+        left: 35%;
+        z-index: 10;
+    }
+    53% {
+        opacity: 1;
+        transform: rotate(180deg);
+        top: 62%;
+        left: 35%;
+        z-index: 10;
+    }
+    90%, 96%, 100% {
+        opacity: 1;
+        top: 22%;
+        left: 35%;
+        transform: rotate(150deg);
+        z-index: 10;
+    }
+    93% {
+        opacity: 1;
+        top: 23%;
+        left: 36%;
+        transform: rotate(150deg);
+        z-index: 10;
+    }
+}
+
+/* Board */
+
+.container_done {
+  position: relative;
+  max-width: 10%;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  transform: scale(1); /* nécessaire pour que l'écrito de l'indice soit bien positionné */
+  align-items: center;
+}
+
+.image_done {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.clue_done {
+  background-color: #CECECE;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+  color: black;
+  font-size: 10px;
+  padding: 3px 5px;
+  opacity: 0;
+  font-weight: bold;
+  position: fixed;
+  width: 50%;
+  left: 25%;
+  top: 20%;
+  transform: translate(0, 50%);
+  transition: .5s ease;
+  text-align: center;
+}
+
+.container_done:hover {
+    margin: 30px;
+}
+
+@keyframes big {
+    10%, 100% {
+        transform: scale(1.5);
+        opacity: 0.3;
+    }
+}
+
+.container_done:hover .image_done {
+  animation: big 3.5s ease;
+  
+}
+
+@keyframes appear {
+    10%, 100% {
+        opacity: 1;
+    }
+}
+
+.container_done:hover .clue_done {
+    animation: appear 3.5s ease;
+}
+
+/* Hand */
+
+.container_undone {
+  position: relative;
+  max-width: 20%;
+  max-height: 100%;
+  margin: 5px;
+}
+
+.image_undone {
+    position: relative;
+    height: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px hidden #CECECE;
+    transition: .5s ease;
+}
+
+.image_undone:hover {
+    transform: scale(1.5);
+}
+
+.clue_undone {
+  background-color: #CECECE;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+  color: black;
+  font-size: 10px;
+  padding: 3px 5px;
+  font-weight: bold;
+  position: relative;
+  width: 55%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+}
+
+
+/* Fin */
+
+
+@keyframes launch_end {
+    from {left: 80%;}
+    to {left: 50%;}
+}
+
+#middle_text {
+    text-align: center;
+    visibility: hidden;
+}
+
+#middle_text button {
+    left: 0%;
+    width: 50%;
+    margin: 5px;
+}

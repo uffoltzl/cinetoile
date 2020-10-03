@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>game</title>
+    <link rel="stylesheet" type="text/css" href="commun.css" />
+    <link rel="stylesheet" type="text/css" href="game.css" />
+    <script defer src="data/load_data.js"></script>
+    <script defer src="game.js"></script>
+  </head>
+  <body>
+    <div id="swup">
+      <p id="tuto">Tutorial</p>
+      <img id=fleche src="fleche.png">
+      <div id="middle_text">
+         <br>
+        <button id="play">Play Again</button>
+      </div>
+      <div id="board" ondrop="drop(event)" ondragover="allowDrop(event)">
+      </div>
+      <div id="hand">
+      </div>
+    </div>
+  </body>
+</html>
