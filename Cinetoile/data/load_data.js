@@ -1,4 +1,4 @@
-/* Objet qui contient toutes les informations du film */
+/* Class with all the information necessary to describe a movie */
 class Carte {
   constructor(url, nom, date) {
     // image
@@ -6,18 +6,18 @@ class Carte {
     this.nom = nom;
     this.date = date;
 
-    // est-ce qu'on a cliqué sur l'image pendant le jeu
+    // is the image clicked
     this.clicked = false;
-    // position de l'image sur le plateau
+    // postition of the image on the board
     this.top = 0;
     this.bot = 3000;
     this.x = 0;
-    // indice sélectionné pour cette image
+    // is the clue selected for this image
     this.indice = false;
   }
 }
 
-/* On charge toute la data sous forme de carte stockée dans un tableau */
+/* Load all the data in a array of cards */
 
 var films = [];
 
