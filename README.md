@@ -1,5 +1,5 @@
 # cinetoile
 
-Pour lancer le jeu :
-- pas besoin de connection internet
-- double cliquer sur homepage.html
+Launch the game:
+- no internet needed
+- double click on homepage.html
