@@ -12,7 +12,7 @@
     40%, 60% {transform: translate3d(4px, 0, 0);}
 }
 
-/* Division de l'espace */
+/* Divide the space */
 
 
 #board {
@@ -80,7 +80,7 @@ button:hover {
   transform: translateY(-0.3em);
 }
 
-/* Indication */
+/* Clues */
 
 #indication {
     margin-top: 10px;
@@ -171,7 +171,7 @@ button:hover {
   margin-right: 20px;
   margin-top: 15px;
   margin-bottom: 15px;
-  transform: scale(1); /* nécessaire pour que l'écrito de l'indice soit bien positionné */
+  transform: scale(1); /* necessary for the label of the clue */
   align-items: center;
 }
 
@@ -266,7 +266,7 @@ button:hover {
 }
 
 
-/* Fin */
+/* End */
 
 
 @keyframes launch_end {
