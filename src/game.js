@@ -24,7 +24,7 @@ function getDifficulty(){
 function findFilm(databank, url){
     var i = 0;
     while (i < databank.length) {
-        if (("data/" + databank[i].url) === url) {
+        if (databank[i].url === url) {
             return i;
         }
         else {
@@ -90,14 +90,14 @@ function drag(ev) {
         document.getElementById("tuto").style.animation = "";
    }
   
-    var data = ev.target.src.substring(ev.target.src.lastIndexOf("/")+1)
+    var data = '../data/' + ev.target.src.substring(ev.target.src.lastIndexOf("/")+1);
     ev.dataTransfer.setData("image", data);
 }
   
 function drop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("image");
-    var i = findFilm(hand, "data/" + data);
+    var i = findFilm(hand, data);
     action_board(i);
 }
 
@@ -121,7 +121,7 @@ function printBoard(){
     board_obj.innerHTML = "";
     board.forEach(film => {
       board_obj.innerHTML += "<div class='container_done'>" +
-                "<img class='image_done' src='data/" + film.url + "'>" +
+                "<img class='image_done' src='" + film.url + "'>" +
                 "<div class='clue_done'>" + film.nom + "<br>" + film.date + "</div></div>";
     });
 
@@ -170,13 +170,13 @@ function printHand(){
       if(film.indice){
           // the player has already unlocked the clue for this film
           document.getElementById("hand").innerHTML += "<div class='container_undone'>" +
-                              "<img class='image_undone' draggable='true' ondragstart='drag(event)' src='data/" + film.url + "'>" +
+                              "<img class='image_undone' draggable='true' ondragstart='drag(event)' src='" + film.url + "'>" +
                               "<div class='clue_undone'>" + film.nom + "</div></div>";
       }
       else {
           // the player has not unlocked the clue for this film yet
           document.getElementById("hand").innerHTML += "<div class='container_undone'>" +
-                              "<img class='image_undone' draggable='true' ondragstart='drag(event)' src='data/" + film.url + "'></div>";
+                              "<img class='image_undone' draggable='true' ondragstart='drag(event)' src='" + film.url + "'></div>";
       }
     });
 
