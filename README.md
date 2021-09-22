@@ -4,6 +4,8 @@ Launch the game:
 - no internet needed
 - double click on homepage.html
 
+You can find the game at https://cinetoile-timeline.netlify.app/ .
+
 ## TODO
 
 - redimension de l'écran
