@@ -90,7 +90,7 @@ function drag(ev) {
         document.getElementById("tuto").style.animation = "";
    }
   
-    var data = '../data/' + ev.target.src.substring(ev.target.src.lastIndexOf("/")+1);
+    var data = '../../data/' + ev.target.src.substring(ev.target.src.lastIndexOf("/")+1);
     ev.dataTransfer.setData("image", data);
 }
   
