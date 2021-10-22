@@ -6,6 +6,15 @@ Launch the game:
 
 You can find the game at https://cinetoile-timeline.netlify.app/ .
 
+## Refactorisation
+
+- game.js
+    - add type="module" in game.html import
+    - use node
+- iterates on all files of data
+    - var fs = require('fs');
+    - var files = fs.readdirSync('/assets/photos/');
+
 ## TODO
 
 - redimension de l'écran
