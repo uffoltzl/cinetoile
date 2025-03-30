@@ -15,13 +15,14 @@ var maximalPoint = 0;
 
 /* Get the difficulty chosen for the game */
 function getDifficulty() {
-  var i = window.location.href.length - 1;
+  const i = window.location.href.length - 1;
   return window.location.href[i];
 }
 
 /* Get the type chosen for the game */
 function getType() {
-  return "movies";
+  const params = new URLSearchParams(document.location.search);
+  return params.get("type");
 }
 
 /* Look for a film in databank (array) with the help of an url */
@@ -92,6 +93,7 @@ function drag(ev) {
   var data =
     "../../data/" +
     getType() +
+    "/" +
     ev.target.src.substring(ev.target.src.lastIndexOf("/") + 1);
   ev.dataTransfer.setData("image", data);
 }
@@ -107,10 +109,10 @@ function drop(ev) {
 
 /* Initialisation of the board */
 function beginBoard() {
-  maximalPoint = films.length;
-  var i = Math.floor(Math.random() * films.length);
-  board.push(films[i]);
-  films.splice(i, 1);
+  maximalPoint = cards.length;
+  var i = Math.floor(Math.random() * cards.length);
+  board.push(cards[i]);
+  cards.splice(i, 1);
   printBoard();
 }
 
@@ -158,13 +160,13 @@ function addHand() {
   if (hand.length > 3) {
     alert("Error: too many cards in your hand");
   }
-  if (films.length > 0) {
-    var i = Math.floor(Math.random() * films.length);
+  if (cards.length > 0) {
+    var i = Math.floor(Math.random() * cards.length);
     if (getDifficulty() == 0) {
-      films[i].indice = true;
+      cards[i].indice = true;
     }
-    hand.push(films[i]);
-    films.splice(i, 1);
+    hand.push(cards[i]);
+    cards.splice(i, 1);
   }
 }
 
@@ -270,7 +272,7 @@ function printHand() {
 
 /* Function called every round to update all the information */
 function update() {
-  if (nbError >= 3 || (films.length === 0 && hand.length === 0)) {
+  if (nbError >= 3 || (cards.length === 0 && hand.length === 0)) {
     // Gameover: you won or lost
 
     // Blurred board
@@ -296,7 +298,7 @@ function update() {
         "/" +
         maximalPoint +
         middle_text.innerHTML;
-    } else if (films.length === 0) {
+    } else if (cards.length === 0) {
       middle_text.innerHTML =
         "CONGRATULATION YOU WON<br>Your score is " +
         board.length +
