@@ -325,32 +325,275 @@ switch (type) {
     break;
   }
   case "actors": {
+    addCard("../../data/actors/adam_driver_1983.jpg", "Adam Driver", 1983);
+    addCard("../../data/actors/aishwarya_rai_1973.jpg", "Aishwarya Rai", 1973);
     addCard("../../data/actors/al_pacino_1940.jpg", "Al Pacino", 1940);
+    addCard("../../data/actors/alan_rickman_1946.jpg", "Alan Rickman", 1946);
+    addCard(
+      "../../data/actors/angelina_jolie_1975.jpg",
+      "Angelina Jolie",
+      1975
+    );
+    addCard("../../data/actors/anne_hathaway_1982.jpg", "Anne Hathaway", 1982);
     addCard(
       "../../data/actors/audrey_hepburn_1929.jpg",
       "Audrey Hepburn",
       1929
     );
+    addCard("../../data/actors/awkwafina_1988.jpg", "Awkwafina", 1988);
+    addCard("../../data/actors/ben_affleck_1972.jpg", "Ben Affleck", 1972);
+    addCard(
+      "../../data/actors/benedict_cumberbatch_1976.jpg",
+      "Benedict Cumberbatch",
+      1976
+    );
+    addCard("../../data/actors/brad_pitt_1963.jpg", "Brad Pitt", 1963);
+    addCard(
+      "../../data/actors/bradley_cooper_1975.jpg",
+      "Bradley Cooper",
+      1975
+    );
+    addCard("../../data/actors/bruce_willis_1955.jpg", "Bruce Willis", 1955);
+    addCard("../../data/actors/cary_grant_1904.jpg", "Cary Grant", 1904);
     addCard(
       "../../data/actors/charlie_chaplin_1889.jpg",
       "Charlie Chaplin",
       1889
     );
+    addCard(
+      "../../data/actors/charlize_theron_1975.jpg",
+      "Charlize Theron",
+      1975
+    );
+    addCard(
+      "../../data/actors/chris_hemsworth_1983.jpg",
+      "Chris Hemsworth",
+      1983
+    );
+    addCard("../../data/actors/chris_pratt_1979.jpg", "Chris Pratt", 1979);
+    addCard(
+      "../../data/actors/christian_bale_1974.jpg",
+      "Christian Bale",
+      1974
+    );
+    addCard("../../data/actors/daniel_craig_1968.jpg", "Daniel Craig", 1968);
+    addCard(
+      "../../data/actors/daniel_radcliffe_1989.jpg",
+      "Daniel Radcliffe",
+      1989
+    );
+    addCard(
+      "../../data/actors/dwayne_johnson_1972.jpg",
+      "Dwayne Johnson",
+      1972
+    );
+    addCard("../../data/actors/emilia_clarke_1986.jpg", "Emilia Clarke", 1986);
+    addCard("../../data/actors/emilie_blunt_1983.jpg", "Emilie Blunt", 1983);
+    addCard("../../data/actors/emma_roberts_1991.jpg", "Emma Roberts", 1991);
+    addCard("../../data/actors/emma_stone_1988.jpg", "Emma Stone", 1988);
+    addCard("../../data/actors/emma_thompson_1959.jpg", "Emma Thompson", 1959);
+    addCard("../../data/actors/emma_watson_1990.jpg", "Emma Watson", 1990);
+    addCard("../../data/actors/gal_gadot_1985.jpg", "Gal Gadot", 1985);
+    addCard(
+      "../../data/actors/george_clooney_1961.jpg",
+      "George Clooney",
+      1961
+    );
+    addCard("../../data/actors/harrison_ford_1942.jpg", "Harrison Ford", 1942);
+    addCard("../../data/actors/helen_mirren_1945.jpg", "Helen Mirren", 1945);
+    addCard(
+      "../../data/actors/helena_bonham_carter_1966.jpg",
+      "Helena Bonham Carter",
+      1966
+    );
+    addCard("../../data/actors/hugh_grant_1960.jpg", "Hugh Grant", 1960);
+    addCard("../../data/actors/hugh_jackman_1968.jpg", "Hugh Jackman", 1968);
+    addCard("../../data/actors/idris_elba_1972.jpg", "Idris Elba", 1972);
+    addCard("../../data/actors/jackie_chan_1954.jpg", "Jackie Chan", 1954);
+    addCard(
+      "../../data/actors/jake_gyllenhaal_1980.jpg",
+      "Jake Gyllenhaal",
+      1980
+    );
+    addCard("../../data/actors/jason_statham_1967.jpg", "Jason Statham", 1967);
+    addCard(
+      "../../data/actors/jennifer_aniston_1969.jpg",
+      "Jennifer Aniston",
+      1969
+    );
+    addCard(
+      "../../data/actors/jennifer_garner_1972.jpg",
+      "Jennifer Garner",
+      1972
+    );
+    addCard(
+      "../../data/actors/jennifer_lawrence_1990.jpg",
+      "Jennifer Lawrence",
+      1990
+    );
+    addCard(
+      "../../data/actors/jessica_chastain_1977.jpg",
+      "Jessica Chastain",
+      1977
+    );
+    addCard("../../data/actors/jim_carrey_1962.jpg", "Jim Carrey", 1962);
+    addCard(
+      "../../data/actors/joaquin_phoenix_1974.jpg",
+      "Joaquin Phoenix",
+      1974
+    );
+    addCard("../../data/actors/jodie_foster_1962.jpg", "Jodie Foster", 1962);
+    addCard("../../data/actors/johnny_depp_1963.jpg", "Johnny Depp", 1963);
+    addCard("../../data/actors/jude_law_1972.jpg", "Jude Law", 1972);
     addCard("../../data/actors/julia_roberts_1967.jpg", "Julia Roberts", 1967);
+    addCard("../../data/actors/julie_walters_1950.jpg", "Julie Walters", 1950);
+    addCard(
+      "../../data/actors/kate_blanchett_1969.jpg",
+      "Cate Blanchett",
+      1969
+    );
+    addCard("../../data/actors/kate_winslet_1975.jpg", "Kate Winslet", 1975);
+    addCard(
+      "../../data/actors/keira_knightley_1985.jpg",
+      "Keira Knightley",
+      1985
+    );
+    addCard("../../data/actors/kirsten_dunst_1982.jpg", "Kirsten Dunst", 1982);
+    addCard(
+      "../../data/actors/kristen_steward_1990.jpg",
+      "Kristen Stewart",
+      1990
+    );
+    addCard(
+      "../../data/actors/leonardo_dicaprio_1974.jpg",
+      "Leonardo DiCaprio",
+      1974
+    );
+    addCard("../../data/actors/lily_collins_1989.jpg", "Lily Collins", 1989);
+    addCard("../../data/actors/lily_james_1989.jpg", "Lily James", 1989);
+    addCard(
+      "../../data/actors/louis_de_funes_1914.jpg",
+      "Louis de Funes",
+      1914
+    );
+    addCard("../../data/actors/maggie_smith_1934.jpg", "Maggie Smith", 1934);
+    addCard("../../data/actors/margot_robbie_1990.jpg", "Margot Robbie", 1990);
     addCard(
       "../../data/actors/marilyn_monroe_1926.jpg",
       "Marilyn Monroe",
       1926
     );
+    addCard(
+      "../../data/actors/marion_cotillard_1975.jpg",
+      "Marion Cotillard",
+      1975
+    );
+    addCard("../../data/actors/mark_ruffalo_1967.jpg", "Mark Ruffalo", 1967);
+    addCard(
+      "../../data/actors/marlene_dietrich_1901.jpg",
+      "Marlene Dietrich",
+      1901
+    );
+    addCard("../../data/actors/matt_daemon_1970.jpg", "Matt Damon", 1970);
+    addCard(
+      "../../data/actors/matthew_mcconaughey_1969.jpg",
+      "Matthew McConaughey",
+      1969
+    );
     addCard("../../data/actors/meryl_streep_1949.jpg", "Meryl Streep", 1949);
+    addCard(
+      "../../data/actors/michael_fassbender_1977.jpg",
+      "Michael Fassbender",
+      1977
+    );
+    addCard("../../data/actors/michelle_yeoh_1962.jpg", "Michelle Yeoh", 1962);
+    addCard(
+      "../../data/actors/millie_bobby_brown_2004.jpg",
+      "Millie Bobby Brown",
+      2004
+    );
+    addCard(
+      "../../data/actors/morgan_freeman_1937.jpg",
+      "Morgan Freeman",
+      1937
+    );
+    addCard(
+      "../../data/actors/natalie_portman_1981.jpg",
+      "Natalie Portman",
+      1981
+    );
     addCard("../../data/actors/nicolas_cage_1964.jpg", "Nicolas Cage", 1964);
+    addCard("../../data/actors/nicole_kidman_1967.jpg", "Nicole Kidman", 1967);
+    addCard("../../data/actors/omar_sy_1978.jpg", "Omar Sy", 1978);
+    addCard("../../data/actors/owen_wilson_1968.jpg", "Owen Wilson", 1968);
+    addCard("../../data/actors/penelope_cruz_1974.jpg", "Penelope Cruz", 1974);
+    addCard(
+      "../../data/actors/pierce_brosnan_1953.jpg",
+      "Pierce Brosnan",
+      1953
+    );
+    addCard("../../data/actors/pierre_niney_1989.jpg", "Pierre Niney", 1989);
+    addCard(
+      "../../data/actors/rachel_mcadams_1978.jpg",
+      "Rachel McAdams",
+      1978
+    );
+    addCard(
+      "../../data/actors/reese_witherspoon_1976.jpg",
+      "Reese Witherspoon",
+      1976
+    );
     addCard(
       "../../data/actors/robert_de_niro_1943.jpg",
       "Robert de Niro",
       1943
     );
+    addCard(
+      "../../data/actors/robet_pattinson_1986.jpg",
+      "Robert Pattinson",
+      1986
+    );
+    addCard("../../data/actors/ryan_gosling_1980.jpg", "Ryan Gosling", 1980);
+    addCard("../../data/actors/ryan_reynolds_1976.jpg", "Ryan Reynolds", 1976);
+    addCard(
+      "../../data/actors/samuel_l_jackson_1948.jpg",
+      "Samuel L. Jackson",
+      1948
+    );
+    addCard(
+      "../../data/actors/sandra_bullock_1964.jpg",
+      "Sandra Bullock",
+      1964
+    );
+    addCard(
+      "../../data/actors/scarlett_johansson_1983.jpg",
+      "Scarlett Johansson",
+      1983
+    );
+    addCard("../../data/actors/sean_connery_1930.jpg", "Sean Connery", 1930);
+    addCard("../../data/actors/song_kang_ho_1967.jpg", "Song Kang-ho", 1967);
+    addCard(
+      "../../data/actors/tessa_thompson_1983.jpg",
+      "Tessa Thompson",
+      1983
+    );
+    addCard(
+      "../../data/actors/timothee_chalamet_1995.jpg",
+      "Timothée Chalamet",
+      1995
+    );
+    addCard("../../data/actors/tom_cruise_1962.jpg", "Tom Cruise", 1962);
     addCard("../../data/actors/tom_hanks_1956.jpg", "Tom Hanks", 1956);
-    addCard("../../data/actors/kate_winslet_1975.jpg", "Kate Winslet", 1975);
+    addCard(
+      "../../data/actors/vincent_cassel_1966.jpg",
+      "Vincent Cassel",
+      1966
+    );
+    addCard("../../data/actors/viola_davis_1965.jpg", "Viola Davis", 1965);
+    addCard("../../data/actors/will_smith_1968.jpg", "Will Smith", 1968);
+    addCard("../../data/actors/zac_efron_1987.jpg", "Zac Efron", 1987);
+    addCard("../../data/actors/zendaya_1996.jpg", "Zendaya", 1996);
+    addCard("../../data/actors/zoe_saldana_1978.jpg", "Zoe Saldana", 1978);
 
     break;
   }
