@@ -172,13 +172,14 @@ function addHand() {
 
 /* Print the hand; nbError; nbClues; the score of the player */
 function printHand() {
-  document.getElementById("hand").innerHTML = "";
+  document.getElementById("hand-cards").innerHTML = "";
+  document.getElementById("hand-info").innerHTML = "";
 
-  // Print the images
+  // Print the images in the hand-cards div
   hand.forEach((film) => {
     if (film.indice) {
       // the player has already unlocked the clue for this film
-      document.getElementById("hand").innerHTML +=
+      document.getElementById("hand-cards").innerHTML +=
         "<div class='container_undone'>" +
         "<img class='image_undone' draggable='true' ondragstart='drag(event)' src='" +
         film.url +
@@ -188,7 +189,7 @@ function printHand() {
         "</div></div>";
     } else {
       // the player has not unlocked the clue for this film yet
-      document.getElementById("hand").innerHTML +=
+      document.getElementById("hand-cards").innerHTML +=
         "<div class='container_undone'>" +
         "<img class='image_undone' draggable='true' ondragstart='drag(event)' src='" +
         film.url +
@@ -196,16 +197,16 @@ function printHand() {
     }
   });
 
-  // Print Errors and Score
-  document.getElementById("hand").innerHTML +=
+  // Print Errors, Score, and Clues in the hand-info div
+  document.getElementById("hand-info").innerHTML +=
     "<div id='error'><h1>Errors<br>" + nbError + "</h1></div>";
-  document.getElementById("hand").innerHTML +=
+  document.getElementById("hand-info").innerHTML +=
     "<div id='score'><h1>Score<br>" + board.length + "</h1></div>";
   if (getDifficulty() != 0) {
     // if difficulty is > 0; then the clues can be unclocked
-    document.getElementById("hand").innerHTML +=
+    document.getElementById("hand-info").innerHTML +=
       "<div id='clues'><h1>Clues<br>" + nbClues + "</h1></div>";
-    document.getElementById("hand").innerHTML +=
+    document.getElementById("hand-info").innerHTML +=
       "<div id='button_clue'>" +
       "<button id='real_button_clue'>Use a clue</button>" +
       "<div id='indication'>" +
@@ -217,7 +218,7 @@ function printHand() {
       .addEventListener("click", click_clue_button);
   } else {
     // if difficulty is = 0; then no clue can be unclocked
-    document.getElementById("hand").innerHTML +=
+    document.getElementById("hand-info").innerHTML +=
       "<div id='button_clue'>" +
       "<div id='indication'>" +
       "Please click on an image." +

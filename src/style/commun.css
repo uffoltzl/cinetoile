@@ -3,6 +3,9 @@ body {
   color: #B9BBB6;
   font-family: sans-serif;
   font-size: 16px;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
 }
 
 #middle_text {
@@ -12,17 +15,21 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 30%;
+    max-width: 500px;
+    min-width: 280px;
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
     color: white;
-    padding:10px;
+    padding: 20px;
     border-radius: 8px;
     z-index: 1;
+    box-sizing: border-box;
 }
 
 #middle_text #buttons {
   display: flex;
   justify-content: center;
   gap: 8px;
+  flex-wrap: wrap;
 }
 
 #middle_text button {
@@ -30,7 +37,13 @@ body {
   text-align: center;
   border: 3px solid white;
   border-radius: 12px;
-  padding: 5px 20px;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  min-width: 100px;
+  transition: all 0.3s ease;
 }
 
 #middle_text button:hover {
@@ -38,4 +51,78 @@ body {
   border-color: lightblue;
   color: black;
   transform: scale(1.03);
+}
+
+#middle_text select {
+  padding: 8px 12px;
+  border: 2px solid white;
+  border-radius: 6px;
+  background-color: transparent;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#middle_text select option {
+  background-color: #222021;
+  color: white;
+}
+
+#middle_text label {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+  #middle_text {
+    width: 85%;
+    max-width: none;
+    top: 50%;
+    padding: 16px;
+    margin: 0 16px;
+    left: 48%;
+  }
+  
+  #middle_text button {
+    padding: 12px 16px;
+    font-size: 16px;
+    min-width: 120px;
+  }
+  
+  #middle_text select {
+    padding: 10px 12px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  body {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #middle_text {
+    width: 90%;
+    padding: 12px;
+    margin: 0 8px;
+  }
+  
+  #middle_text #buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  #middle_text button {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 16px;
+    min-width: unset;
+  }
+  
+  #middle_text select {
+    width: 100%;
+    max-width: none;
+  }
 }

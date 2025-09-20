@@ -37,6 +37,21 @@
     width: 75%;
     top: 75%;
     transition: 2s;
+    gap: 15px;
+}
+
+/* Desktop: Keep everything in one line */
+#hand-cards, #hand-info {
+    display: contents;
+}
+
+/* Add space between hand-cards and hand-info sections */
+.container_undone:last-child {
+    margin-right: 30px;
+}
+
+#error {
+    margin-left: 30px;
 }
 
 #error {
@@ -239,6 +254,8 @@ button:hover {
 .image_undone {
     position: relative;
     height: 70%;
+    max-height: 150px;
+    width: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -283,4 +300,255 @@ button:hover {
     left: 0%;
     width: 50%;
     margin: 5px;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+  #board {
+    height: 60%;
+    width: 95%;
+    padding-bottom: 10px;
+    margin: 0 auto;
+  }
+
+  #hand {
+    height: 35%;
+    width: 95%;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  #hand-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #hand-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .container_done {
+    max-width: 15%;
+    margin: 8px;
+  }
+
+  .container_undone {
+    max-width: 25%;
+    margin: 8px;
+    flex: 0 0 auto;
+  }
+
+  .image_undone {
+    height: 60px;
+    width: auto;
+  }
+
+  .clue_undone {
+    font-size: 8px;
+    padding: 2px 4px;
+    width: 80%;
+  }
+
+  .clue_done {
+    font-size: 8px;
+    padding: 2px 4px;
+    width: 70%;
+    left: 15%;
+  }
+
+  #error, #score, #clues {
+    font-size: 12px;
+    margin: 5px;
+    flex: 0 0 auto;
+  }
+
+  #error h1, #score h1, #clues h1 {
+    font-size: 14px;
+    margin: 2px 0;
+  }
+
+  #button_clue {
+    width: 100%;
+    flex: 0 0 100%;
+    text-align: center;
+  }
+
+  #button_clue button {
+    width: 60%;
+    padding: 8px 12px;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  #indication {
+    font-size: 10px;
+    margin-top: 5px;
+  }
+
+  #tuto {
+    font-size: 30px;
+    left: 35%;
+    top: 10%;
+  }
+
+  #fleche {
+    width: 15%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #board {
+    height: 65%;
+    width: 98%;
+    padding-bottom: 5px;
+  }
+
+  #hand {
+    height: 30%;
+    width: 98%;
+    top: 70%;
+    padding: 5px;
+    overflow-y: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #hand-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #hand-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .container_done {
+    max-width: 20%;
+    margin: 5px;
+  }
+
+  .container_undone {
+    max-width: 30%;
+    margin: 5px;
+  }
+
+  .image_undone {
+    height: 50px;
+    width: auto;
+  }
+
+  .image_undone:hover {
+    transform: scale(1.2);
+  }
+
+  .clue_undone {
+    font-size: 7px;
+    padding: 1px 2px;
+    width: 90%;
+  }
+
+  .clue_done {
+    font-size: 7px;
+    padding: 1px 2px;
+    width: 80%;
+    left: 10%;
+  }
+
+  #error, #score, #clues {
+    font-size: 10px;
+    margin: 2px 8px;
+  }
+
+  #error h1, #score h1, #clues h1 {
+    font-size: 12px;
+    margin: 1px 0;
+  }
+
+  #button_clue {
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  #button_clue button {
+    width: 80%;
+    padding: 10px 8px;
+    font-size: 11px;
+  }
+
+  #indication {
+    font-size: 9px;
+  }
+
+  #tuto {
+    font-size: 24px;
+    left: 30%;
+    top: 15%;
+  }
+
+  #fleche {
+    width: 20%;
+  }
+
+  /* Make drag and drop more touch-friendly */
+  .image_undone {
+    border: 2px solid transparent;
+    touch-action: none;
+  }
+
+  .image_undone[style*="border: solid"] {
+    border: 2px solid #CECECE !important;
+  }
+
+  /* Improve button spacing for touch */
+  button {
+    min-height: 44px;
+    touch-action: manipulation;
+  }
+}
+
+/* Landscape mode for small screens */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+  #board {
+    height: 50%;
+  }
+
+  #hand {
+    height: 45%;
+    top: 55%;
+  }
+
+  .container_undone {
+    max-width: 20%;
+  }
+
+  .image_undone {
+    height: 40px;
+  }
+
+  #tuto {
+    font-size: 20px;
+    top: 5%;
+  }
 }
