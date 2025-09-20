@@ -91,7 +91,7 @@ function drag(ev) {
   }
 
   var data =
-    "../../data/" +
+    "../assets/data/" +
     getType() +
     "/" +
     ev.target.src.substring(ev.target.src.lastIndexOf("/") + 1);
