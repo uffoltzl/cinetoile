@@ -19,19 +19,23 @@ body {
     z-index: 1;
 }
 
+#middle_text #buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
 #middle_text button {
   position: relative;
-  left: 29%;
   text-align: center;
   border: 3px solid white;
   border-radius: 12px;
-  width: 20%;
-  padding: 5px 10px;
+  padding: 5px 20px;
 }
 
 #middle_text button:hover {
   background-color: lightblue;
   border-color: lightblue;
   color: black;
-  transform: scale(1.1);
+  transform: scale(1.03);
 }
